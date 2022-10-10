@@ -2,9 +2,10 @@ package cours.TD1.Ex3;
 
 public class Livre {
     private String titre, auteur;
-    private float nbPages;
+    private int nbPages;
 
-    public Livre(String auteur, String titre) {
+    public Livre(String titre, String auteur) {
+
         this.auteur = auteur;
         this.titre = titre;
     }
@@ -23,7 +24,7 @@ public class Livre {
     }
 
     // EX2
-    public void setPages(float number) {
+    public void setPages(int number) {
         this.nbPages = number;
     }
 
@@ -56,6 +57,15 @@ public class Livre {
     }
 
     public Livre(String titre, int nbPages) {
+        this.titre = titre;
+        this.nbPages = nbPages;
+    }
+
+    public Livre(String titre, String auteur, int nbPages) {
+
+        this.titre = titre;
+        this.nbPages = nbPages;
+        this.auteur = auteur;
 
     }
 }
