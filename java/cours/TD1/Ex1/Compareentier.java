@@ -1,5 +1,5 @@
 
-package cours.TD1;
+package cours.TD1.Ex1;
 
 public class Compareentier {
 

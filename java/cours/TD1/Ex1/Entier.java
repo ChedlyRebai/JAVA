@@ -1,4 +1,4 @@
-package cours.TD1;
+package cours.TD1.Ex1;
 
 public class Entier {
     private int n; // valeur de l&#39;entier
