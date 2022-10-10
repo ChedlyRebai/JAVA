@@ -2,17 +2,20 @@ package cours;
 
 public class Entier {
     private int n; // valeur de l&#39;entier
-    private int dn;
 
     private Entier(int e) {
-        e = n;
+        this.n = e;
     }
 
     public void incrementer(int dn) {
-        this.n += this.dn;
+        this.n += dn;
     }
 
     public void afficher() {
-        System.out.println(this.dn);
+        System.out.println(this.n);
+    }
+
+    public int getN() {
+        return this.n;
     }
 }
