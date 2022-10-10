@@ -1,3 +1,5 @@
+package cours;
+
 public class Entier {
     private int n; // valeur de l&#39;entier
     private int dn;
@@ -7,7 +9,7 @@ public class Entier {
     }
 
     public void incrementer(int dn) {
-        this.n += dn;
+        this.n += this.dn;
     }
 
     public void afficher() {
