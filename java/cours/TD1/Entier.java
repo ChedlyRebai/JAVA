@@ -1,9 +1,9 @@
-package cours;
+package cours.TD1;
 
 public class Entier {
     private int n; // valeur de l&#39;entier
 
-    private Entier(int e) {
+    Entier(int e) {
         this.n = e;
     }
 
