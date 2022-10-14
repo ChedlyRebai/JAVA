@@ -66,7 +66,12 @@ public class Livre {
 
     // EX1
     public void setPrix(double prix) {
-        this.prix = prix;
+        if (this.prixFixe == false) {
+            this.prix = prix;
+            this.prixFixe = true;
+        } else {
+            System.out.println("desole le prix est fixé");
+        }
     }
 
     public double getPrix() {
