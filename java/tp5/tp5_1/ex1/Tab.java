@@ -3,7 +3,7 @@ package tp5.tp5_1.ex1;
 import java.util.Scanner;
 
 public class Tab {
-    private static int nmax = 40;
+    public final static int nmax = 40;
     
     public static void remplir(float t[]){
            Scanner in=new Scanner(System.in);
