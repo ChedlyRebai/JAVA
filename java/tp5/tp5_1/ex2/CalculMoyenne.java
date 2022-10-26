@@ -14,6 +14,7 @@ public class CalculMoyenne {
             System.out.println("donner nb;");
             nb=in.nextInt();
         }while(nb>40);
+        
         noteCtrl = new float[nb];
         noteExam = new float[nb];
         for (int i = 0; i < nb; i++) {
