@@ -17,10 +17,6 @@ public class CalculMoyenne {
         
         noteCtrl = new float[nb];
         noteExam = new float[nb];
-        /*for (int i = 0; i < nb; i++) {
-            System.out.printf("note de controle n°"+(i+1)+"=");
-            noteCtrl[i]=in.nextInt();
-        }*/
 
         System.out.println("remplir tableau des notes de controle: ");
         Tab.remplir(noteCtrl);
@@ -29,11 +25,9 @@ public class CalculMoyenne {
 
         System.out.println("remplir tableau des notes d'examen: ");
         Tab.remplir(noteExam);
-        
         System.out.println("affichage de tableau des notes de l'examen: ");
         Tab.lister(noteExam);
 
-        
         float[] moy=new float[nb];
         for (int i = 0; i < nb; i++) {
             moy[i]=noteCtrl[i]+2*noteExam[i];
@@ -42,13 +36,10 @@ public class CalculMoyenne {
     
         float moyclass=Tab.somme_element(moy)/nb;
         System.out.println("moyenne de la classe:"+moyclass);
-
-        
-        
-        float x=(float) 1.5;
-        
-        moy=Tab.additionner2(x, moy);
-        System.out.println("moyenne des etudiants apres lincrimenattion :");
+  
+        float x=(float) 1.5;  
+        moy=Tab.additionner(x, moy);
+        System.out.println("moyenne des etudiants apres lincrimentation :");
         Tab.lister(moy);
         in.close();
     }
