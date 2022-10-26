@@ -17,47 +17,39 @@ public class CalculMoyenne {
         
         noteCtrl = new float[nb];
         noteExam = new float[nb];
-        for (int i = 0; i < nb; i++) {
+        /*for (int i = 0; i < nb; i++) {
             System.out.printf("note de controle n°"+(i+1)+"=");
             noteCtrl[i]=in.nextInt();
-        }
-        for (int i = 0; i < 2; i++) {
-            System.out.printf("note d'examen n°"+(i+1)+"=");
-            noteExam[i]=in.nextInt();
-        }
+        }*/
 
-        for (int i = 0; i < nb; i++) {
-            System.out.printf("note de controle n°"+(i+1)+"="+noteCtrl[i]+"\n");
-            
-        }
+        System.out.println("remplir tableau des notes de controle: ");
+        Tab.remplir(noteCtrl);
+        System.out.println("affichage de tableau de note de controle: ");
+        Tab.lister(noteCtrl);
 
-        for (int i = 0; i < nb; i++) {
-            System.out.printf("note d'examen n°"+(i+1)+"="+noteExam[i]+"\n");
-            
-        }
+        System.out.println("remplir tableau des notes d'examen: ");
+        Tab.remplir(noteExam);
+        
+        System.out.println("affichage de tableau des notes de l'examen: ");
+        Tab.lister(noteExam);
+
         
         float[] moy=new float[nb];
         for (int i = 0; i < nb; i++) {
             moy[i]=noteCtrl[i]+2*noteExam[i];
             System.out.println("moyenne de l'etudiant n°"+(i+1)+":"+moy[i]);
         }
-        
-        
+    
         float moyclass=Tab.somme_element(moy)/nb;
         System.out.println("moyenne de la classe:"+moyclass);
 
-        System.err.println("afficher de tableau notectrl avec la methode static lister");
-        Tab.lister(noteCtrl);
-
-        System.err.println("afficher de tableau examen avec la methode static lister");
-        Tab.lister(noteExam);
+        
         
         float x=(float) 1.5;
         
         moy=Tab.additionner2(x, moy);
-        for (int i = 0; i < moy.length; i++) {
-            System.out.println("moyenne de l'etudiant n°:"+(i+1)+" apres lincrimenattion :"+moy[i]);
-        }
+        System.out.println("moyenne des etudiants apres lincrimenattion :");
+        Tab.lister(moy);
         in.close();
     }
 }
