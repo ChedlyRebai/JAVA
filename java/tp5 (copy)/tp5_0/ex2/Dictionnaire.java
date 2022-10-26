@@ -1,10 +1,10 @@
-package tp5.ex2;
+package tp5.tp5_0.ex2;
 
-import tp5.ex1.Motdico;
+import tp5.tp5_0.ex1.Motdico;
 
 public class Dictionnaire {
     private int nbmots = 0;
-    public static int index = 0;
+    private int index = 0;
     Motdico[] dico;
     private String nom;
 
@@ -37,10 +37,10 @@ public class Dictionnaire {
     public void supprimermot(String ch) {
         for (int i = 0; i < index; i++) {
             if ((dico[i].getMot()).equals(ch)) {
-                for (int j = i; j < index; j++) {
-                    dico[j] = dico[j + 1];
-                }
                 index--;
+                for (int j = i; j < index; j++) {
+                    dico[j] = dico[j +1];  
+                }
             }
         }
 
