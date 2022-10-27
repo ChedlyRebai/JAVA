@@ -32,12 +32,11 @@ public class Tab {
             return resulta;
         }
     
-        public static float[] produit(float t1[],float t2[]){
-            
+        public static float[] produit(float x,float t2[]){
             float[] resulta; 
             resulta=new float[t2.length];
                for (int i = 0; i < t2.length; i++) {
-                    resulta[i]=t1[i]*t2[i];
+                    resulta[i]=x*t2[i];
                }
             return resulta;
         }
@@ -48,7 +47,7 @@ public class Tab {
                }   
         }
 
-        public static float [] additionner2(float x,float k[]){
+        public static float [] additionner(float x,float k[]){
             float[] t=new float[k.length];
             for (int i = 0; i < k.length; i++) {
                 t[i]=k[i]+x;

@@ -46,13 +46,13 @@ public class Dictionnaire {
 
     }
 
-    public void tostring(Motdico m) {
+    public void toString(Motdico m) {
         System.out.println("mot:" + m.getMot() + "\n Definitions: " + m.getDefinitions());
     }
 
     public void listerdico() {
         for (int i = 0; i < index; i++) {
-            tostring(dico[i]);
+            toString(dico[i]);
         }
     }
 
@@ -74,5 +74,4 @@ public class Dictionnaire {
         }
         return nb;
     }
-
 }
