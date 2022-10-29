@@ -1,11 +1,13 @@
 package DS.DS2020;
 
+import java.util.Scanner;
+
 public class Film {
-    private String titre;
-    private String realisateur;
-    private String pays;
-    private int duree;
-    private int nbplace;
+    protected String titre;
+    protected String realisateur;
+    protected String pays;
+    protected int duree;
+    protected int nbplace;
 
     public String getTitre() {
         return titre;
@@ -55,12 +57,15 @@ public class Film {
     }
 
     public float totalVenteBillets() {
-
+        System.out.println("places pour l'etudiants");
+        Scanner in = new Scanner(System.in);
+        int nbEtudiants = in.nextInt();
+        return nbEtudiants * 2 + (this.nbplace - nbEtudiants) * 3;
     }
 
     @Override
     public String toString() {
-        return "Film [titre=" + titre + ", realisateur=" + realisateur + ", pays=" + pays + "]";
+        return this.titre + " de " + this.realisateur + " (" + this.pays + ")" + " - " + this.duree + "min";
     }
 
 }
