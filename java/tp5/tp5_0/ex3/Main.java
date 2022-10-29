@@ -1,9 +1,6 @@
-package tp5.ex3;
-
-import java.util.Dictionary;
-
-import tp5.ex1.Motdico;
-import tp5.ex2.Dictionnaire;
+package tp5.tp5_0.ex3;
+import tp5.tp5_0.ex2.Dictionnaire ;
+import tp5.tp5_0.ex1.Motdico;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +22,6 @@ public class Main {
         System.out.println("nombre synonyme larou " + larou.nbsysnonymes(mot3));
         larou.supprimermot("mot1");
         larou.listerdico();
-
+        
     };
 }

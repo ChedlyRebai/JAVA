@@ -1,4 +1,4 @@
-package tp5.ex1;
+package tp5.tp5_0.ex1;
 
 public class Motdico {
 
