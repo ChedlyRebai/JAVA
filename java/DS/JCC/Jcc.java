@@ -1,29 +1,34 @@
 package DS.JCC;
 
 public class Jcc {
-    Film[] competition;
-    int annee;
-    final int maximum = 30;
-    int nbf = 0;
-    int index = 0;
+    private Film[] competition;
+    private int annee;
+    private final int maximum = 30;
+    private int nbf = 0;
+    // private int index = 0;
 
     Jcc(int taille, int annee) {
-        competition = new Film[taille];
+        if (taille <= this.maximum) {
+            competition = new Film[taille];
+
+        }
+        if (taille > this.maximum) {
+            System.out.println("taille est plus grand");
+        }
         this.annee = annee;
-        this.nbf = taille;
     }
 
     public void ajout(Film f) {
-        if (index == nbf) {
+        if (this.nbf == this.competition.length) {
             System.out.println("La compétition est au complet ");
         } else {
-            competition[index] = f;
-            index++;
+            competition[this.nbf] = f;
+            this.nbf++;
         }
     }
 
     public void lister() {
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < this.nbf; i++) {
             // if ((competition[i].getClass().getSimpleName()).equals("Film")) {
 
             System.out.println(competition[i].toString());
@@ -32,7 +37,7 @@ public class Jcc {
 
     public float totalVenteBillets() {
         float somme = 0;
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < this.nbf; i++) {
             somme += competition[i].totalVenteBillets();
         }
         return somme;
