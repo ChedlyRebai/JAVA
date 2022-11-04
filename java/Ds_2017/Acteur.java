@@ -1,9 +1,9 @@
 package Ds_2017;
 
 public class Acteur {
-    private String nom, prenom;
-    private int age;
-    private double Montant;
+    protected String nom, prenom;
+    protected int age;
+    protected double Montant;
 
     public double getSalaire() {
         return this.Montant;
