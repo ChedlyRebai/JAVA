@@ -22,9 +22,13 @@ public class Film {
     }
 
     public float totalVenteBillets() {
-        System.out.println("places pour l'etudiants");
         Scanner in = new Scanner(System.in);
-        int nbEtudiants = in.nextInt();
+        int nbEtudiants;
+        do {
+            System.out.println("places pour l'etudiants");
+            nbEtudiants = in.nextInt();
+        } while (nbEtudiants > this.nbplace);
+
         return nbEtudiants * 2 + (this.nbplace - nbEtudiants) * 3;
     }
 

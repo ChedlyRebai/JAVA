@@ -16,6 +16,6 @@ public class Documentaire extends Film {
 
     @Override
     public float totalVenteBillets() {
-        return super.nbplace * 2;
+        return nbplace * this.tarif;
     }
 }
