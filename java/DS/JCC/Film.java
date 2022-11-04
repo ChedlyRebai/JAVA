@@ -3,11 +3,8 @@ package DS.JCC;
 import java.util.Scanner;
 
 public class Film {
-    protected String titre;
-    protected String realisateur;
-    protected String pays;
-    protected int duree;
-    protected int nbplace;
+    protected String titre, realisateur, pays;
+    protected int nbplace, duree;
 
     public int getNbplace() {
         return nbplace;
@@ -33,7 +30,8 @@ public class Film {
 
     @Override
     public String toString() {
-        return this.titre + " de " + this.realisateur + " (" + this.pays + ")" + " - " + this.duree + "min";
+        return this.titre + " de " + this.realisateur
+                + " (" + this.pays + ")" + " - " + this.duree + "min";
     }
 
 }

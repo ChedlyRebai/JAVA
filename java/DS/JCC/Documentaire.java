@@ -11,8 +11,7 @@ public class Documentaire extends Film {
 
     @Override
     public String toString() {
-        return this.titre + " de " + this.realisateur + " (" + this.pays + ")" + " - " +
-                this.duree + "min sujet:" + this.sujet;
+        return super.toString() + " sujet:" + this.sujet;
     }
 
     @Override
