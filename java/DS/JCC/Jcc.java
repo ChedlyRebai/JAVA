@@ -31,7 +31,7 @@ public class Jcc {
         for (int i = 0; i < this.nbf; i++) {
             // if ((competition[i].getClass().getSimpleName()).equals("Film")) {
 
-            System.out.println(competition[i].toString());
+            System.out.println(competition[i]);
         }
     }
 
@@ -53,6 +53,8 @@ public class Jcc {
         list.ajout(film2);
         list.ajout(film1);
         list.lister();
-
+        System.out.println("total vente billet:" + list.totalVenteBillets());
+        System.out.println(list.toString());
+        System.out.println(list.competition[0]);
     }
 }
